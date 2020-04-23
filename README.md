@@ -9,11 +9,11 @@ This project demonstrates **Angular Elements** in action.
 - Clone this repository or download it to your local machine.
 - Run `npm install`
 - Run `npm run build`
-- Open or server **index.html** from the folder **dist/public**
+- Open **index.html** from the folder **dist/public** or serve the folder **dist/public** using `http-server` or something equivalent.
 
 This *index.html* is a vanilla index.html file which has the script loaded to it which was built by the Angular build process.
 
-You can directly open the **index.html** file or may install **http-server** globally by the command `npm install http-server -g` and launch *http-server* from **dist/public** folder by getting into the folder and running `http-server`.
+Thus, you can directly open the **index.html** file or may install **http-server** globally by the command `npm install http-server -g` and launch *http-server* from **dist/public** folder by getting into the folder and running `http-server`.
 
 ## Note
 
