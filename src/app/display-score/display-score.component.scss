@@ -1,0 +1,14 @@
+:host {
+  display: block;
+  text-align: center;
+  font-size: 4em;
+  color: #999;
+
+  &.success {
+    color: #05d57e;
+  }
+
+  &.danger {
+    color: #ff1a1a;
+  }
+}
