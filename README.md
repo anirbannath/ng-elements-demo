@@ -1,27 +1,23 @@
 # NgElementsPoc
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
+This project demonstrates **Angular Elements** in action.
 
-## Development server
+*Angular elements* are Angular components packaged as custom elements (also called Web Components), a web standard for defining new HTML elements in a framework-agnostic way. Visit [Angular Guide](https://angular.io/guide/elements) for more information.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Project Setup
 
-## Code scaffolding
+- Clone this repository or download it to your local machine.
+- Run `npm install`
+- Run `npm run build`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Now you may open the *index.html* file in your browser from the folder **dist/public**
+This *index.html* is a vanilla index.html file which has the script loaded to it which was built by the Angular build process.
 
-## Build
+Or
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+You may install **http-server** globally by the command `npm install http-server -g` and launch *http-server* from **dist/public** folder by getting into the folder and running `http-server`.
 
-## Running unit tests
+## Note
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+If you see the build script in the package.json file you will notice, there is a command `node build.js`.
+This basically concats all the Angular build javascript files into one file for ease of importing in the index.html file which then can rely on just one javascript file.
