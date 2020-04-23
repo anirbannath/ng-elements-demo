@@ -2,7 +2,7 @@
 
 This project demonstrates **Angular Elements** in action.
 
-Demo: [anirbannath.github.io/ng-elements-demo] (https://anirbannath.github.io/ng-elements-demo)
+Demo: [anirbannath.github.io/ng-elements-demo](https://anirbannath.github.io/ng-elements-demo)
 
 *Angular elements* are Angular components packaged as custom elements (also called Web Components), a web standard for defining new HTML elements in a framework-agnostic way. Visit [Angular Guide](https://angular.io/guide/elements) for more information.
 
