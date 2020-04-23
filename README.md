@@ -1,4 +1,4 @@
-# NgElementsPoc
+# NgElementsDemo
 
 This project demonstrates **Angular Elements** in action.
 
