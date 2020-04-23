@@ -61,3 +61,8 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
+
+
+// import '@webcomponents/webcomponentsjs/webcomponents-bundle.js';
+import '@webcomponents/custom-elements';
+import '@webcomponents/custom-elements/src/native-shim';

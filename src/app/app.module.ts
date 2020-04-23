@@ -1,18 +1,31 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { NgModule, Injector } from '@angular/core';
+import { HeaderComponent } from './header/header.component';
+import { createCustomElement } from '@angular/elements';
 
 @NgModule({
   declarations: [
-    AppComponent
+    HeaderComponent
+  ],
+  entryComponents: [
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: []
 })
-export class AppModule { }
+export class AppModule {
+  constructor(private injector: Injector) { }
+
+  ngDoBootstrap() {
+    const elementList = [
+      { component: HeaderComponent, selector: 'poc-header' }
+    ];
+
+    for (const { component, selector } of elementList) {
+      const el = createCustomElement(component, { injector: this.injector });
+      customElements.define(selector, el);
+    }
+  }
+}
