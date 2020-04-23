@@ -8,9 +8,9 @@ const concat = require('concat');
   ];
 
   const js = [
-    './dist/ng-elements-poc/runtime.js',
-    './dist/ng-elements-poc/polyfills.js',
-    './dist/ng-elements-poc/main.js',
+    './dist/ng-elements-demo/runtime.js',
+    './dist/ng-elements-demo/polyfills.js',
+    './dist/ng-elements-demo/main.js',
   ];
 
   await fs.ensureDir('dist/public');
