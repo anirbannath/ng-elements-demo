@@ -8,8 +8,8 @@ if (environment.production) {
   enableProdMode();
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  console.log('DOMContentLoaded');
+// document.addEventListener('DOMContentLoaded', () => {
+  console.log('main.ts loaded');
   platformBrowserDynamic().bootstrapModule(AppModule)
     .catch(err => console.error(err));
-});
+// });
