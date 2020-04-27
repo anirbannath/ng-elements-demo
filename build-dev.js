@@ -10,6 +10,8 @@ const concat = require('concat');
   const js = [
     './dist/ng-elements-demo/runtime.js',
     './dist/ng-elements-demo/polyfills.js',
+    './dist/ng-elements-demo/styles.js',
+    './dist/ng-elements-demo/vendor.js',
     './dist/ng-elements-demo/main.js',
   ];
 

@@ -4,7 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --output-hashing none && node build.js",
+    "build:dev": "ng build --prod=false --outputHashing=none",
+    "bundle:dev": "npm run build:dev && node build-dev.js",
+    "build": "ng build --prod --outputHashing=none",
+    "bundle": "npm run build && node build.js",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

@@ -34,6 +34,9 @@ export class AppModule {
   constructor(private injector: Injector) { }
 
   ngDoBootstrap() {
+
+    console.log('NgDoBootstrap');
+
     const elementList = [
       { component: HeaderComponent, selector: 'poc-header' },
       { component: CardComponent, selector: 'poc-card' },
@@ -43,9 +46,14 @@ export class AppModule {
       { component: DisplayScoreComponent, selector: 'poc-display-score' },
     ];
 
+    console.log('Registering Elements started...');
+
     for (const { component, selector } of elementList) {
       const el = createCustomElement(component, { injector: this.injector });
       customElements.define(selector, el);
     }
+
+    console.log('Registering Elements ends...');
+
   }
 }

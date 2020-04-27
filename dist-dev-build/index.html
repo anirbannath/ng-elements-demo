@@ -1,0 +1,88 @@
+<!--
+  This is a basic HTML page out of Angular Context.
+  This file is not included in the Angular Build Cycle.
+-->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>NgElementsDemo</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f7f7f7;
+    }
+
+    .margin-std {
+      margin: 30px 20px;
+    }
+
+    p {
+      margin: 16px 0;
+    }
+
+  </style>
+  <script defer src="./ng-elements-demo.js"></script>
+</head>
+
+<body>
+  <poc-header>Demo Elements</poc-header>
+
+  <poc-card class="margin-std">
+    <poc-card-header>
+      Controller
+    </poc-card-header>
+    <poc-card-body>
+      <poc-controls id="controls"></poc-controls>
+    </poc-card-body>
+  </poc-card>
+
+  <poc-card class="margin-std">
+    <poc-card-header>
+      Scoreboard
+    </poc-card-header>
+    <poc-card-body>
+      <poc-display-score id="displayScore"></poc-display-score>
+    </poc-card-body>
+  </poc-card>
+
+  <poc-card class="margin-std info">
+    <poc-card-body>
+      <p>
+        In this site, Angular Components (poc-header, poc-card, poc-card-body, poc-controls, poc-display-score)
+        are being translated to Custom Elements and are being used by native vanilla HTML and JS.
+      </p>
+      <p>
+        Check out the source code at <a href="https://github.com/anirbannath/ng-elements-demo"
+          target="_blank">github.com/anirbannath/ng-elements-demo</a>
+      </p>
+    </poc-card-body>
+  </poc-card>
+
+  <script>
+    (function () {
+      var
+        controls = document.getElementById('controls'),
+        displayScore = document.getElementById('displayScore');
+
+      var score = 0;
+
+      controls.addEventListener('controlValueChange', (e) => {
+        if (e) {
+          displayScore.setAttribute('score', score += e.detail)
+        }
+      });
+    }());
+
+  </script>
+</body>
+
+</html>
