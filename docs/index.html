@@ -1,88 +1,136 @@
-<!--
-  This is a basic HTML page out of Angular Context.
-  This file is not included in the Angular Build Cycle.
--->
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>NgElementsDemo</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Open Sans', sans-serif;
-      background-color: #f7f7f7;
-    }
+  <meta charset="UTF-8">
+  <title>Workspace</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    .margin-std {
-      margin: 30px 20px;
-    }
+  <link rel="stylesheet" href="./ng-elements-demo/res/styles.css">
+  <script src="./ng-elements-demo/res/app.js" defer></script>
 
-    p {
-      margin: 16px 0;
-    }
-
-  </style>
-  <script defer src="./ng-elements-demo/ng-elements-demo.js"></script>
 </head>
 
 <body>
-  <poc-header>Demo Elements</poc-header>
 
-  <poc-card class="margin-std">
-    <poc-card-header>
-      Controller
-    </poc-card-header>
-    <poc-card-body>
-      <poc-controls id="controls"></poc-controls>
-    </poc-card-body>
-  </poc-card>
+  <!-- USELESS CODE -->
 
-  <poc-card class="margin-std">
-    <poc-card-header>
-      Scoreboard
-    </poc-card-header>
-    <poc-card-body>
-      <poc-display-score id="displayScore"></poc-display-score>
-    </poc-card-body>
-  </poc-card>
+  <style>
+    .app-header {
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      height: 50px;
+      color: #fff;
+      background-color: #2c2f32;
+    }
+  </style>
 
-  <poc-card class="margin-std info">
-    <poc-card-body>
-      <p>
-        In this site, Angular Components (poc-header, poc-card, poc-card-body, poc-controls, poc-display-score)
-        are being translated to Custom Elements and are being used by native vanilla HTML and JS.
-      </p>
-      <p>
-        Check out the source code at <a href="https://github.com/anirbannath/ng-elements-demo"
-          target="_blank">github.com/anirbannath/ng-elements-demo</a>
-      </p>
-    </poc-card-body>
-  </poc-card>
+  <div class="app-header">APP HEADER</div>
 
-  <script>
-    (function () {
-      var
-        controls = document.getElementById('controls'),
-        displayScore = document.getElementById('displayScore');
+  <!-- USELESS CODE END -->
 
-      var score = 0;
+  <div class="ni-wrapper" style="height: calc(100vh - 50px)">
+    <div id="workspace-menu" class="ni-sidebar">
+      <div class="ni-sidebar-menu">
+        <!-- PRIMARY MENU -->
+        <div class="ni-sidebar-menu-primary d-flex flex-column">
+          <div class="flex-grow-1">
+            <button class="ni-sidebar-btn-primary-icon active">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M8.50001 0L17.5 3.57628e-07L22 4.5V16.5682L20.7046 18H16V22.5682L14.5682 24H2.5L1 22.5682L1 7.50001L2.5 6.00001L7.00001 5.99999V1.5L8.50001 0ZM16 1.5V6.00001H20.5L20.5 16.5H8.50001L8.50001 1.5L16 1.5ZM19.8787 4.5L17.5 2.12132V4.5H19.8787ZM7.00001 7.50001V16.5682L8.50001 18H14.5V22.5H2.5L2.5 7.50001H7.00001Z"
+                  fill="white"></path>
+              </svg>
+            </button>
+            <button class="ni-sidebar-btn-primary-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M13.5 1.5L15 0H22.5L24 1.5V9L22.5 10.5H15L13.5 9V1.5ZM15 1.5V9H22.5V1.5H15ZM0 15V6L1.5 4.5H9L10.5 6V13.5H18L19.5 15V22.5L18 24H10.5H9H1.5L0 22.5V15ZM9 13.5V6H1.5V13.5H9ZM9 15H1.5V22.5H9V15ZM10.5 22.5H18V15H10.5V22.5Z"
+                  fill="white"></path>
+              </svg>
+            </button>
+            <button class="ni-sidebar-btn-primary-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M14.3456 0L15.2003 4.27366L18.8266 1.85612L22.1438 5.17332L19.7263 8.79966L24 9.6544V14.3456L19.7263 15.2004L22.1439 18.8267L18.8267 22.1439L15.2003 19.7263L14.3456 24H9.65436L8.79963 19.7264L5.17333 22.1439L1.85613 18.8267L4.27367 15.2004L0 14.3456V9.6544L4.27366 8.79966L1.85612 5.17335L5.17332 1.85614L8.79964 4.27369L9.65436 3.56734e-05L14.3456 0ZM10.8841 1.50003L10.0608 5.61666L8.8575 6.11504L5.36445 3.78634L3.78631 5.36448L6.11502 8.85754L5.6166 10.0608L1.5 10.8841V13.1159L5.6166 13.9392L6.11503 15.1425L3.78632 18.6356L5.36446 20.2137L8.85752 17.885L10.0607 18.3834L10.8841 22.5H13.1159L13.9392 18.3834L15.1425 17.885L18.6355 20.2137L20.2137 18.6355L17.885 15.1425L18.3834 13.9392L22.5 13.1159V10.8841L18.3834 10.0608L17.885 8.85751L20.2137 5.36445L18.6355 3.78631L15.1425 6.11501L13.9392 5.61664L13.1159 1.50001L10.8841 1.50003ZM12 8.42311C10.0245 8.42311 8.42306 10.0245 8.42306 12C8.42306 13.9755 10.0245 15.5769 12 15.5769C13.9755 15.5769 15.5769 13.9755 15.5769 12C15.5769 10.0245 13.9755 8.42311 12 8.42311ZM6.92306 12C6.92306 9.19612 9.19607 6.92311 12 6.92311C14.8039 6.92311 17.0769 9.19612 17.0769 12C17.0769 14.8039 14.8039 17.0769 12 17.0769C9.19607 17.0769 6.92306 14.8039 6.92306 12Z"
+                  fill="#F4F4F4"></path>
+              </svg>
+            </button>
+          </div>
+          <div>
+            <button id="btn-code-editor" class="ni-sidebar-btn-primary-icon">
 
-      controls.addEventListener('controlValueChange', (e) => {
-        if (e) {
-          displayScore.setAttribute('score', score += e.detail)
-        }
-      });
-    }());
+            </button>
+          </div>
+        </div>
+        <!-- END OF PRIMARY MENU -->
 
-  </script>
+        <!-- SECONDARY MENU -->
+        <div class="ni-sidebar-menu-secondary">
+          <div id="workspace-menu-header" class="ni-sidebar-menu-header">Local Components</div>
+          <div class="ni-sidebar-menu-search">
+            <input class="ni-sidebar-menu-search-bar" type="search" placeholder="Search">
+          </div>
+          <!-- WIDGET LIST -->
+          <div class="ni-sidebar-menu-list">
+            <!-- WIDGET LIST ITEM -->
+            <div class="ni-sidebar-menu-list-item">
+              <div class="ni-sidebar-menu-widget">
+                <div class="ni-sidebar-menu-widget-icon"></div>
+                <div class="ni-sidebar-menu-widget-content">
+                  <div>Widget 1</div>
+                  <small>by Team 1</small>
+                </div>
+              </div>
+              <div class="ni-sidebar-menu-options">
+                <a href="javascript:void(0)">+</a>
+                <a href="javascript:void(0)">-</a>
+              </div>
+            </div>
+            <!-- WIDGET LIST ITEM END -->
+            <div class="ni-sidebar-menu-list-item">
+              <div class="ni-sidebar-menu-widget">
+                <div class="ni-sidebar-menu-widget-icon"></div>
+                <div class="ni-sidebar-menu-widget-content">Widget 2</div>
+              </div>
+              <div class="ni-sidebar-menu-options">
+                <a href="javascript:void(0)">+</a>
+                <a href="javascript:void(0)">-</a>
+              </div>
+            </div>
+            <div class="ni-sidebar-menu-list-item">
+              <div class="ni-sidebar-menu-widget">
+                <div class="ni-sidebar-menu-widget-icon"></div>
+                <div class="ni-sidebar-menu-widget-content">Widget 3</div>
+              </div>
+              <div class="ni-sidebar-menu-options">
+                <a href="javascript:void(0)">+</a>
+                <a href="javascript:void(0)">-</a>
+              </div>
+            </div>
+          </div>
+          <!-- WIDGET LIST END -->
+        </div>
+        <!-- END OF SECONDARY MENU -->
+      </div>
+    </div>
+    <div id="workspace-splitter" class="ni-col-splitter"></div>
+    <div class="workspace-playground">
+      Here is the main workspace
+    </div>
+    <div id="workspace-code-editor" class="ni-workspace-code-editor">
+      <div class="p-3">
+        Code editor module.<br>
+        The same resizing mechanism can be done here as the menu.<br>
+        <br>
+        The code editor is like a modal like construct, here. So it doesnot squeeze the workspace.<br>
+        The shadow is given for the elevation.
+      </div>
+    </div>
+  </div>
+
 </body>
 
 </html>
